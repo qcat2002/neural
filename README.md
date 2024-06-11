@@ -1,7 +1,7 @@
-# *__神经网络 Neural Network Repository__*
+# 神经网络 Neural Network Repository
 ![What is Neural Network?](images/nn.png)
 
-## *__目录 Table of contents__*
-1. [*Linear Regression*](# *Linear Regression*)
+## 目录 Table of contents
+1. [Linear Regression](#linear-regression)
 
-### *Linear Regression*
+## Linear Regression
