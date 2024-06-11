@@ -1,5 +1,5 @@
 # 神经网络 Neural Network Repository
-![What is Neural Network?](images/nn.png)
+![What is Neural Network?](public_images/nn.png)
 
 ## 目录 Table of contents
 1. Linear Regression
