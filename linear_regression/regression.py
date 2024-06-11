@@ -26,7 +26,7 @@ def dispay(x_input, y_output):
     # 使用其他支持中文的字体
     plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']  # 示例中使用 Arial Unicode MS 字体，您可以替换为其他中文支持字体
     plt.rcParams['axes.unicode_minus'] = False
-    fig = plt.figure()
+    fig = plt.figure(dpi=500)
     ax = fig.add_subplot(111, projection='3d')
 
     # 绘制散点图
@@ -37,12 +37,10 @@ def dispay(x_input, y_output):
     ax.set_ylabel('第二维数据')
     ax.set_zlabel('输出参照')
 
+    plt.savefig('boston_data.png')
     plt.show()
 
 
 def linearmodel(w, b, x):
     return np.dot(x, w) + b
 
-
-X, Y = read_data()
-# dispay(X, Y)

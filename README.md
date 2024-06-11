@@ -2,6 +2,10 @@
 ![What is Neural Network?](images/nn.png)
 
 ## 目录 Table of contents
-1. [Linear Regression](#linear-regression)
+1. Linear Regression
+2. xxx
+3. xxx
 
-## Linear Regression
+## 版权信息
+本项目受 [MIT许可证](LICENSE) 保护
+
