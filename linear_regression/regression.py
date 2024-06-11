@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D as axe3d
 from sklearn import preprocessing as pp
 import pandas as pd
+import math
 
 
 def read_data():
@@ -41,6 +42,31 @@ def dispay(x_input, y_output):
     plt.show()
 
 
-def linearmodel(w, b, x):
-    return np.dot(x, w) + b
+def linearmodel(xs, w, b):
+    ps = np.zeros(np.shape(xs)[0])
+    for i in range(np.shape(xs)[0]):
+        ps[i] = np.dot(xs[i], w) + b
+    return ps
+
+
+def vectorized(xs, w, b):
+    #                          (np matrix 1                  , m2) tuple
+    xs = np.concatenate((np.ones((np.shape(xs)[0], 1)), xs), axis=1)
+    w = np.concatenate((np.array([b]), w))
+    return xs, w
+
+
+def vectorized_linearmodel(xs_vec, w_vec):
+    return np.dot(xs_vec, w_vec)
+
+
+def solve_exact(X, y):
+    A = np.dot(X.T, X)
+    c = np.dot(X.T, y)
+    return np.dot(np.linalg.inv(A), c)
+
+
+def cost(prediction, target):
+    total_residual = np.sum((prediction - target))
+    return np.dot(total_residual, total_residual)/(2*prediction.shape[0])
 
