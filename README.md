@@ -3,7 +3,7 @@
 
 ## 目录 Table of contents
 1. Linear Regression
-2. xxx
+2. Gradient Descent
 3. xxx
 
 ## 版权信息
